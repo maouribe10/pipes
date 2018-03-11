@@ -1,20 +1,145 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
 
+  <br>
+  <h1>Pipes</h1>
+  <hr>
+
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Variable</th>
+        <th>Pipe</th>
+        <th>Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>{{ nombre }}</th>
+        <td>uppercase</td>
+        <td>{{ nombre | uppercase }}</td> <!--MAURICIO-->       
+      </tr>
+      <tr>
+        <th>{{ nombre }}</th>
+        <td>lowercase</td>
+        <td>{{ nombre | lowercase }}</td> <!--mauricio-->       
+      </tr>
+      <tr>
+        <th>{{ nombre }}</th>
+        <td>slice:3</td>
+        <td>{{ nombre | slice:3 }}</td> <!--ricio-->       
+      </tr>
+      <tr>
+        <th>{{ nombre }}</th>
+        <td>slice:0:3</td>
+        <td>{{ nombre | slice:0:3 }}</td> <!--Mau-->        
+      </tr>
+      <tr>
+        <th>{{ arreglo }}</th>
+        <td>slice:1:5</td>
+        <td>{{ arreglo | slice:1:5 }}</td> <!--2,3,4,5-->        
+      </tr>
+      <tr>
+        <th>{{ PI }}</th>
+        <td>number</td>
+        <td>{{ PI | number }}</td> <!--3.142-->        
+      </tr>
+      <tr>
+        <th>{{ PI }}</th>
+        <td>number:"3.1-1"</td>
+        <td>{{ PI | number:"3.1-1" }}</td> <!--003.1-->        
+      </tr>
+      <tr>
+        <th>{{ PI }}</th>
+        <td>number:"1.1-1"</td>
+        <td>{{ PI | number:"3.1-1" }}</td> <!--003.1-->        
+      </tr>
+      <tr>
+        <th>{{ numDecimal }}</th>
+        <td>number:"1.1-1"</td>
+        <td>{{ numDecimal | number:"1.4-6" }}</td> <!--003.1-->        
+      </tr> 
+      <tr>
+        <th>{{ valorPorcentaje }}</th>
+        <td>percent</td>
+        <td>{{ valorPorcentaje | percent }}</td> <!--003.1-->        
+      </tr> 
+      <tr>
+        <th>{{ valorPorcentaje }}</th>
+        <td>percent:'2.2-2'</td>
+        <td>{{ valorPorcentaje | percent:'2.2-2' }}</td> <!--003.1-->        
+      </tr> 
+      <tr>
+        <th>{{ precio }}</th>
+        <td>currency</td>
+        <td>{{ precio | currency }}</td> <!--Por defecto el currency es en dolares-->        
+      </tr>
+      <tr>
+        <th>{{ precio }}</th>
+        <td>currency:'EUR'</td>
+        <td>{{ precio | currency:'EUR' }}</td> <!--EUR-->        
+      </tr>  
+      <tr>
+        <th>{{ precio }}</th>
+        <td>currency:'EUR':'symbol'</td>
+        <td>{{ precio | currency:'EUR':'symbol' }}</td> <!--simbolo del EUR-->        
+      </tr> 
+      <tr>
+        <th>{{ precio }}</th>
+        <td>currency:'EUR':'symbol':'1.1-1'</td>
+        <td>{{ precio | currency:'EUR':'symbol':'1.1-1' }}</td> <!--ajustando los decimales del currency-->        
+      </tr> 
+      <tr>
+        <th>{{ valorDePromesa }}</th>
+        <td>async</td>
+        <td>{{ valorDePromesa | async }}</td> <!--ajustando los decimales del currency-->        
+      </tr>
+      <tr>
+        <th>{{ myFecha }}</th>
+        <td>date</td>
+        <td>{{ myFecha | date }}</td> <!--ajustando los decimales del currency-->        
+      </tr> 
+      <tr>
+        <th>{{ myFecha }}</th>
+        <td>date:'MMMM - dd'</td>
+        <td>{{ myFecha | date:'MMMM - dd' }}</td> <!--ajustando los decimales del currency-->        
+      </tr>
+      <tr>
+        <th>{{ nombre2 }}</th>
+        <td>capitalizado</td>
+        <td>{{ nombre2 | capitalizado:1:2:3 }}</td> <!--ajustando los decimales del currency-->        
+      </tr>
+      <tr>
+        <th>{{ nombre2 }}</th>
+        <td>capitalizado:false</td>
+        <td>{{ nombre2 | capitalizado:false }}</td> <!--ajustando los decimales del currency-->        
+      </tr>
+      <tr>
+        <th>{{ password }}</th>
+        <td>
+          contrasena:{{ocultar}}
+          <br><br>
+          <button (click)="cambiarValorOcultar()" class="btn btn-outline-primary btn-block">{{ etiquetaBoton }}</button>
+        </td>
+        <td>{{ password | contrasena:ocultar  }}</td> <!--ajustando los decimales del currency-->        
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Slice</h4>
+  <ul>
+    <li *ngFor="let item of arreglo | slice:4:10">{{item}}</li>
+  </ul>
+
+  <h4>Json</h4>
+  <hr>
+  <pre>
+    {{ heroe | json }}
+  </pre>
+
+  <h4>Youtube</h4>
+  <hr>
+  <iframe width="560" height="315" [src]="video | domseguro:url" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+</div>
+
+<br><br>
